@@ -1,15 +1,10 @@
 name: CI
 
-on:
-  push:
-    branches: [master]
-    paths-ignore:
-      - '**/README.md'
+on: [push]
 
 jobs:
   test:
     runs-on: macos-latest
-
     steps:
       - name: Test installation script
         run: |
