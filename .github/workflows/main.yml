@@ -1,0 +1,18 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+    paths-ignore:
+      - '**/README.md'
+
+jobs:
+  test:
+    runs-on: macos-latest
+
+    steps:
+      - name: Test installation script
+        run: |
+          chmod +x install.sh
+          ./install.sh
+
